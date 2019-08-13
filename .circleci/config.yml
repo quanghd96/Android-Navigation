@@ -17,6 +17,10 @@ jobs:
       - restore_cache:
           <<: *cache_key
       - run:
+          command: ls
+      - run:
+          command: pwd
+      - run:
           name: Create keystore.jks
           command: echo $ENCODED_KEYSTORE | base64 --decode >> ${HOME}/repo/keystore.jks
       - run:
