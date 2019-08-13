@@ -22,10 +22,10 @@ jobs:
           command: pwd
       - run:
           name: Create keystore.jks
-          command: echo $ENCODED_KEYSTORE | base64 --decode >> ${HOME}/repo/keystore.jks
+          command: echo $ENCODED_KEYSTORE | base64 --decode >> ${HOME}/project/keystore.jks
       - run:
           name: Create KEYSTORE environment
-          command: echo 'export KEYSTORE=${HOME}/repo/keystore.jks' >> $BASH_ENV
+          command: echo 'export KEYSTORE=${HOME}/project/keystore.jks' >> $BASH_ENV
       - run:
           name: Download Dependencies
           command: ./gradlew dependencies
