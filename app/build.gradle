@@ -30,7 +30,7 @@ android {
             applicationVariants.all { variant ->
                 variant.outputs.all {
                     def formattedDate = new Date().format('yyyyMMdd.HH.mm')
-                    outputFileName = "app-release-${defaultConfig.versionCode}-$formattedDate-.apk"
+                    outputFileName = "app-release-${defaultConfig.versionCode}-${formattedDate}.apk"
                 }
             }
         }
