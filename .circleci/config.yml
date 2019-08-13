@@ -29,4 +29,3 @@ jobs:
           command: ./gradlew assembleDebug
       - store_artifacts:
           path: app/build/outputs/apk/debug/app-debug.apk
-          destination: apks/
